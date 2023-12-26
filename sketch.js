@@ -440,6 +440,9 @@ function keyPressed() {
     } else if (userCode === "+Stg-S") {
       console.log("Code +Stg-S entered. Redirecting to StageSelection S");
       window.location.href = "https://magicarchie.github.io/Stage_Selection_Secret/";
+    } else if (userCode === "+Stg-F") {
+      console.log("Code +Stg-F entered. Redirecting to StageSelection F");
+      window.location.href = "https://magicarchie.github.io/Stage_Selection_Finale/";
     } else {
       console.log("Invalid code. No redirection.");
     }
