@@ -31,13 +31,13 @@ let backgroundMusic;
 
 // Array to store links for each node
 const nodeLinks = [
-  'https://magicarchie.github.io/Stage_1/',
-  'https://magicarchie.github.io/Stage_2/',
-  'https://magicarchie.github.io/Stage_3/',
-  'https://magicarchie.github.io/Stage_4/',
-  'https://magicarchie.github.io/Stage_5/',
-  'https://magicarchie.github.io/Stage_6/',
-  'https://magicarchie.github.io/Stage_7/'
+  'https://magicarchie.github.io/Stage_1F/',
+  'https://magicarchie.github.io/Stage_2F/',
+  'https://magicarchie.github.io/Stage_3F/',
+  'https://magicarchie.github.io/Stage_4F/',
+  'https://magicarchie.github.io/Stage_5F/',
+  'https://magicarchie.github.io/Stage_6F/',
+  'https://magicarchie.github.io/Stage_7F/'
 ];
 
 let secretButton;
@@ -345,7 +345,7 @@ function mouseClicked() {
         }, 800);
 
         setTimeout(function () {
-          window.location.href = 'https://example.com/another-page';
+          window.location.href = 'https://magicarchie.github.io/GuitarHero/';
         }, 1100);
       }
     }
