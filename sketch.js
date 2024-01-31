@@ -28,6 +28,7 @@ let codeEntryCounter;
 let CodeCheckc = false;
 
 let backgroundMusic;
+let ProgressL = 888;
 
 // Array to store links for each node
 const nodeLinks = [
@@ -39,6 +40,8 @@ const nodeLinks = [
   'https://magicarchie.github.io/Stage_6F/',
   'https://magicarchie.github.io/Stage_7F/'
 ];
+
+let LocationS = parseInt(localStorage.getItem('PageL'), 10);
 
 let secretButton;
 let secretButtonSize = nodeRadius * 2;
@@ -195,6 +198,11 @@ function drawSkillTree() {
 function draw() {
   // Draw background
   background(Bg_Img);
+  
+  if (ProgressL > LocationS) {
+    LocationS = ProgressL;
+    localStorage.setItem('PageL', LocationS); 
+  }
 
   // Draw return button
   image(returnButtonImage, returnButtonX, returnButtonY, returnButtonSize, returnButtonSize);
@@ -460,4 +468,3 @@ function toggleNodeInteractivity(nodeIndex, interactive) {
 for (let i = 0; i < stages.length; i++) {
   toggleNodeInteractivity(i, true);
 }
-
