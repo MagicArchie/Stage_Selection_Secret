@@ -42,6 +42,8 @@ const nodeLinks = [
 ];
 
 let LocationS = parseInt(localStorage.getItem('PageL'), 10);
+let StageSend = 88;
+localStorage.setItem('Stage', StageSend);
 
 let secretButton;
 let secretButtonSize = nodeRadius * 2;
