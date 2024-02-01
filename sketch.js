@@ -65,6 +65,7 @@ function preload() {
   incorrectCodeSound = loadSound('materials/sounds/wrong.mp3');
   lightGlitch = loadSound('materials/sounds/lightGlitch.wav');
   backgroundMusic = loadSound('materials/sounds/Mid-Page 1.2.mp3');
+  clickedRs = loadSound('materials/sounds/light-switch-156813.mp3');
 
   for (let i = 0; i < stageCount; i++) {
     const imagePath = `materials/images/Stg_${i + 1}H.png`;
@@ -110,6 +111,15 @@ function setup() {
   textAlign(CENTER, CENTER);
   marginX = width / (stageCount + 1);
   
+  Restart = createImg("materials/images/RstBt.png", "resetButton");
+  Restart.size(70, 70);
+  Restart.position(25, 110);
+  Restart.mousePressed(progressR);
+  
+  Return = createImg("materials/images/Rt_Button.png", "resetButton");
+  Return.size(80, 80);
+  Return.position(20, 20);
+  
   suddenAppearance.setVolume(0.09);
   suddenAppearance.play();
   
@@ -149,6 +159,15 @@ function setup() {
   input.hide(); // Hide the input initially
 
   noLoop();
+}
+
+function progressR() {
+  clickedRs.setVolume(0.1);
+  clickedRs.play();
+  localStorage.clear();
+  setTimeout(function () {
+    window.location.href = 'https://magicarchie.github.io/Art-Puzzles/';
+  }, 400);
 }
 
 function drawSkillTree() {
@@ -198,6 +217,10 @@ function drawSkillTree() {
 function draw() {
   // Draw background
   background(Bg_Img);
+  
+  fill(290, 120);
+  strokeWeight(2);
+  rect(15, 10, 90, 190, 130);
   
   if (ProgressL > LocationS) {
     LocationS = ProgressL;
